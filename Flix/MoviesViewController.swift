@@ -37,7 +37,6 @@ class MoviesViewController: UIViewController {
         }
         task.resume()
     }
-
 }
 
 extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -53,10 +52,15 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.movieTitleLabel.text = movieTitle
         cell.movieOverView.text = movieOverview
         
+        let baseURL = "https://image.tmdb.org/t/p/w185"
+        let posterPath = movie["poster_path"] as! String
+        let url = URL(string: baseURL + posterPath)
+        cell.movieImageView.af_setImage(withURL: url!)
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 150
     }
     
 }
