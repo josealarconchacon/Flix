@@ -33,16 +33,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-dm-jtL">
-                                                    <rect key="frame" x="130" y="45" width="264" height="92"/>
+                                                    <rect key="frame" x="130" y="50" width="264" height="92"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-nH-9ac">
-                                                    <rect key="frame" x="130" y="19" width="264" height="21"/>
+                                                    <rect key="frame" x="130" y="19" width="264" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="264" id="5hM-Sv-Znh"/>
-                                                        <constraint firstAttribute="height" constant="21" id="RZg-nQ-Qsh"/>
+                                                        <constraint firstAttribute="height" constant="28" id="RZg-nQ-Qsh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                     <nil key="textColor"/>
@@ -52,12 +52,12 @@
                                             <constraints>
                                                 <constraint firstItem="S8u-nH-9ac" firstAttribute="top" secondItem="NXi-9R-nGA" secondAttribute="topMargin" constant="8" id="BKT-Qr-iwD"/>
                                                 <constraint firstItem="gtb-lL-vkb" firstAttribute="top" secondItem="NXi-9R-nGA" secondAttribute="topMargin" constant="-2" id="JWa-v5-TOm"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Bus-dm-jtL" secondAttribute="bottom" constant="6" id="RGR-Nb-6TT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bus-dm-jtL" secondAttribute="bottom" constant="1" id="RGR-Nb-6TT"/>
                                                 <constraint firstItem="S8u-nH-9ac" firstAttribute="leading" secondItem="gtb-lL-vkb" secondAttribute="trailing" constant="6" id="eDu-Ey-Qhl"/>
                                                 <constraint firstItem="S8u-nH-9ac" firstAttribute="leading" secondItem="Bus-dm-jtL" secondAttribute="leading" id="eOm-61-o4n"/>
                                                 <constraint firstItem="gtb-lL-vkb" firstAttribute="centerY" secondItem="NXi-9R-nGA" secondAttribute="centerY" id="hhv-KM-2rC"/>
                                                 <constraint firstItem="gtb-lL-vkb" firstAttribute="leading" secondItem="NXi-9R-nGA" secondAttribute="leadingMargin" constant="-17" id="mKN-uf-zWP"/>
-                                                <constraint firstItem="Bus-dm-jtL" firstAttribute="top" secondItem="S8u-nH-9ac" secondAttribute="bottom" constant="5" id="tHg-cb-HtP"/>
+                                                <constraint firstItem="Bus-dm-jtL" firstAttribute="top" secondItem="S8u-nH-9ac" secondAttribute="bottom" constant="3" id="tHg-cb-HtP"/>
                                                 <constraint firstItem="S8u-nH-9ac" firstAttribute="trailing" secondItem="Bus-dm-jtL" secondAttribute="trailing" id="xQp-V1-BHe"/>
                                             </constraints>
                                         </tableViewCellContentView>
