@@ -20,6 +20,7 @@ class MoviesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         setMoviesInfo()
+        navigationController?.navigationBar.tintColor = .black
         tableView.backgroundColor = .clear
     }
     

@@ -82,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="Q8G-HN-yeV">
                         <barButtonItem key="rightBarButtonItem" title="Quick Look" id="vdL-Qf-Blq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Vw2-Yb-Yau" kind="show" id="hxI-GI-ppj"/>
                             </connections>
