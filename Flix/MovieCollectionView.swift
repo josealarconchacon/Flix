@@ -13,23 +13,24 @@ class MovieCollectionView: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movies = [[String: Any]]()
+    var movieCollection = [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        setMoviesInfo()
-//        let widh = (view.frame.size.width - 20) / 3
-//        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.itemSize = CGSize(width: widh, height: widh)
+        setMoviesCollection()
+        collectionUI()
+    }
+    
+    private func collectionUI() {
         let layOut = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layOut.sectionInset = UIEdgeInsets(top: 0,left: 5,bottom: 0,right: 5)
         layOut.minimumInteritemSpacing = 5
         layOut.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20) / 2, height: self.collectionView.frame.size.height / 3)
     }
     
-    private func setMoviesInfo() {
+    private func setMoviesCollection() {
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
@@ -38,7 +39,7 @@ class MovieCollectionView: UIViewController {
               print(error.localizedDescription)
            } else if let data = data {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            self.movies = dataDictionary["results"] as! [[String: Any]]
+            self.movieCollection = dataDictionary["results"] as! [[String: Any]]
             self.collectionView.reloadData()
             print(dataDictionary)
            }
@@ -49,11 +50,11 @@ class MovieCollectionView: UIViewController {
 
 extension MovieCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
+        return movieCollection.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MovieCollectionCell
-        let movie = movies[indexPath.row]
+        let movie = movieCollection[indexPath.row]
         let movieTitle = movie["title"] as! String
         cell.movieTitle.text = movieTitle
         let baseURL = "https://image.tmdb.org/t/p/w185"

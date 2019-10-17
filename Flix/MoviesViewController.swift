@@ -21,7 +21,6 @@ class MoviesViewController: UIViewController {
         tableView.delegate = self
         setMoviesInfo()
         tableView.backgroundColor = .clear
-        tableView.backgroundView = UIImageView(image: UIImage(named: "color-gradients"))
     }
     
     private func setMoviesInfo() {
@@ -53,14 +52,11 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         let movieTitle = movie["title"] as! String
         let movieOverview = movie["overview"] as! String
         cell.movieTitleLabel.text = movieTitle
-        cell.movieTitleLabel.textColor = .white
         cell.movieOverView.text = movieOverview
-        cell.movieOverView.textColor = .white
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let url = URL(string: baseURL + posterPath)
         cell.movieImageView.af_setImage(withURL: url!)
-        cell.backgroundColor = .clear
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
