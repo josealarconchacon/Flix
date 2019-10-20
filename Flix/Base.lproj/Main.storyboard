@@ -208,6 +208,7 @@
                                         <size key="customSize" width="200" height="219"/>
                                         <connections>
                                             <outlet property="moviesGridImage" destination="Sak-IH-rHZ" id="Dnc-Sz-VAG"/>
+                                            <segue destination="0ps-AO-Z0f" kind="presentation" id="4c5-S2-vON"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -234,6 +235,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0G-HH-80X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1528.985507246377" y="410.49107142857139"/>
+        </scene>
+        <!--Movie Grid Detail View-->
+        <scene sceneID="6WA-PE-9PD">
+            <objects>
+                <viewController storyboardIdentifier="MovieGridDetailView" id="0ps-AO-Z0f" customClass="MovieGridDetailView" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkU-DN-AWe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-yy-utc">
+                                <rect key="frame" x="15" y="15" width="74" height="22"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button" image="arrow.left" catalog="system"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="180-0s-boc">
+                                <rect key="frame" x="10" y="46" width="84" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sl6-yy-utc" firstAttribute="leading" secondItem="dbR-ne-VQD" secondAttribute="leading" constant="15" id="YUL-dy-45e"/>
+                            <constraint firstItem="sl6-yy-utc" firstAttribute="top" secondItem="dbR-ne-VQD" secondAttribute="top" constant="15" id="ade-2T-KSU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dbR-ne-VQD"/>
+                    </view>
+                    <connections>
+                        <outlet property="posterView" destination="180-0s-boc" id="EzF-nF-3Qd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMP-yT-gvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2262.3188405797105" y="404.46428571428572"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tuE-fF-EaB">
@@ -274,6 +308,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="launch_image" width="138" height="139"/>
         <image name="projector_tabbar_item" width="21" height="25"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>

@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import BonsaiController
 
 class MoviesGridViewController: UIViewController {
     
@@ -69,10 +70,36 @@ extension MoviesGridViewController: UICollectionViewDataSource, UICollectionView
         let selectedCell = collectionView.cellForItem(at: indexPath)
         selectedCell?.layer.borderColor = UIColor.gray.cgColor
         selectedCell?.layer.borderWidth = 2
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let viewC = storyBoard.instantiateViewController(withIdentifier: "MovieGridDetailView")
+        viewC.transitioningDelegate = self
+        viewC.modalPresentationStyle = .custom
+        present(viewC, animated: true, completion: nil)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.transitioningDelegate = self
+        segue.destination.modalPresentationStyle = .custom
+        guard let detailViewController = segue.destination as? MovieGridDetailView,
+            let index = collectionView.indexPathsForSelectedItems else {
+                return
+        }
+        detailViewController.movie = movies[index.count]
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let didSelectCell = collectionView.cellForItem(at: indexPath)
         didSelectCell?.layer.borderColor = UIColor.lightGray.cgColor
         didSelectCell?.layer.borderWidth = 0.5
     }
+}
+
+extension MoviesGridViewController: BonsaiControllerDelegate {
+    func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
+            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (3/4)))
+        }
+        
+        func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+            return BonsaiController(fromDirection: .bottom, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
+        }
 }
