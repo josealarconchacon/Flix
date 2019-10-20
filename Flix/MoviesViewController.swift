@@ -12,7 +12,6 @@ import AlamofireImage
 class MoviesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     var movies = [[String: Any]]()
     
     override func viewDidLoad() {
@@ -60,6 +59,16 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.movieImageView.af_setImage(withURL: url!)
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let selectedMovie = movies[indexPath.row]
+        let detailVC = segue.destination as! MoviesDetailViewController
+        detailVC.movie = selectedMovie
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
