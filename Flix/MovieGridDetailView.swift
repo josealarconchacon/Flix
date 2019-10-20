@@ -12,6 +12,7 @@ import UIKit
 class MovieGridDetailView: UIViewController {
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var posterTitle: UILabel!
+    @IBOutlet weak var posteroverview: UILabel!
     
     var movie: [String: Any]!
     
@@ -19,6 +20,8 @@ class MovieGridDetailView: UIViewController {
         super.viewDidLoad()
         posterTitle.text = movie["original_title"] as? String
         posterTitle.sizeToFit()
+        posteroverview.text = movie["overview"] as? String
+        posteroverview.sizeToFit()
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let url = URL(string: baseURL + posterPath)
@@ -28,3 +31,4 @@ class MovieGridDetailView: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
+//overview
