@@ -261,14 +261,64 @@
                     <view key="view" contentMode="scaleToFill" id="jpc-ID-mJs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q8t-YX-eQL">
+                                <rect key="frame" x="0.0" y="88" width="415" height="724"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j5e-Gd-2CK">
+                                    <size key="itemSize" width="200" height="219"/>
+                                    <size key="headerReferenceSize" width="0.0" height="10"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoviesGridCell" id="dWd-vM-ceA" customClass="MoviesGridCell" customModule="Flix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="200" height="219"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S5v-9z-eTC">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="219"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sak-IH-rHZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="219"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sak-IH-rHZ" firstAttribute="top" secondItem="S5v-9z-eTC" secondAttribute="top" id="L02-Dl-gZt"/>
+                                                <constraint firstItem="Sak-IH-rHZ" firstAttribute="leading" secondItem="S5v-9z-eTC" secondAttribute="leading" id="cOc-Gv-nvh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Sak-IH-rHZ" secondAttribute="bottom" id="cdw-DW-BRw"/>
+                                                <constraint firstAttribute="trailing" secondItem="Sak-IH-rHZ" secondAttribute="trailing" id="zgX-yi-ElF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="219"/>
+                                        <connections>
+                                            <outlet property="moviesGridImage" destination="Sak-IH-rHZ" id="Dnc-Sz-VAG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wxl-pf-NPP">
+                                    <rect key="frame" x="0.0" y="0.0" width="415" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q8t-YX-eQL" firstAttribute="top" secondItem="jpc-ID-mJs" secondAttribute="top" constant="88" id="2KN-5D-ZzD"/>
+                            <constraint firstAttribute="bottom" secondItem="q8t-YX-eQL" secondAttribute="bottom" constant="84" id="GZl-oQ-eQM"/>
+                            <constraint firstItem="q8t-YX-eQL" firstAttribute="leading" secondItem="Rnv-aF-oSi" secondAttribute="leading" id="LRx-Qj-OTY"/>
+                            <constraint firstAttribute="trailing" secondItem="q8t-YX-eQL" secondAttribute="trailing" constant="-1" id="u54-D2-cHM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rnv-aF-oSi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Superhero" id="tiD-b5-WTV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="q8t-YX-eQL" id="aTo-Ei-CLQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0G-HH-80X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="411"/>
+            <point key="canvasLocation" x="1528.985507246377" y="410.49107142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tuE-fF-EaB">
