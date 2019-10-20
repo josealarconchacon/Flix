@@ -19,6 +19,7 @@ class MoviesGridViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         setMoviesGrid()
+        collectionVLayout()
     }
     
     private func setMoviesGrid() {
@@ -37,6 +38,14 @@ class MoviesGridViewController: UIViewController {
         }
         task.resume()
     }
+    
+    private func collectionVLayout() {
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
+    }
 }
 
 extension MoviesGridViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -46,12 +55,24 @@ extension MoviesGridViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoviesGridCell", for: indexPath) as! MoviesGridCell
-        
         let movie = movies[indexPath.item]
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let url = URL(string: baseURL + posterPath)
         cell.moviesGridImage.af_setImage(withURL: url!)
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.borderWidth = 0.5
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath)
+        selectedCell?.layer.borderColor = UIColor.gray.cgColor
+        selectedCell?.layer.borderWidth = 2
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let didSelectCell = collectionView.cellForItem(at: indexPath)
+        didSelectCell?.layer.borderColor = UIColor.lightGray.cgColor
+        didSelectCell?.layer.borderWidth = 0.5
     }
 }

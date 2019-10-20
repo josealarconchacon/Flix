@@ -17,8 +17,6 @@
 		673F23B52356775100F5C285 /* FlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F23B42356775100F5C285 /* FlixTests.swift */; };
 		673F23C02356775200F5C285 /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F23BF2356775200F5C285 /* FlixUITests.swift */; };
 		673F23CE2356839100F5C285 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F23CD2356839100F5C285 /* MovieTableViewCell.swift */; };
-		673F23D82358E8D500F5C285 /* MovieCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F23D72358E8D500F5C285 /* MovieCollectionView.swift */; };
-		673F23DA2358E94500F5C285 /* MovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F23D92358E94500F5C285 /* MovieCollectionCell.swift */; };
 		67BB48D6235CCA1400737D63 /* MoviesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BB48D5235CCA1400737D63 /* MoviesDetailViewController.swift */; };
 		67BB48D8235CD3C100737D63 /* MoviesGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BB48D7235CD3C100737D63 /* MoviesGridViewController.swift */; };
 		67BB48DA235CD81D00737D63 /* MoviesGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BB48D9235CD81D00737D63 /* MoviesGridCell.swift */; };
@@ -60,8 +58,6 @@
 		673F23BF2356775200F5C285 /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
 		673F23C12356775200F5C285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		673F23CD2356839100F5C285 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		673F23D72358E8D500F5C285 /* MovieCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionView.swift; sourceTree = "<group>"; };
-		673F23D92358E94500F5C285 /* MovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionCell.swift; sourceTree = "<group>"; };
 		67BB48D5235CCA1400737D63 /* MoviesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailViewController.swift; sourceTree = "<group>"; };
 		67BB48D7235CD3C100737D63 /* MoviesGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGridViewController.swift; sourceTree = "<group>"; };
 		67BB48D9235CD81D00737D63 /* MoviesGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGridCell.swift; sourceTree = "<group>"; };
@@ -158,8 +154,6 @@
 				673F23CD2356839100F5C285 /* MovieTableViewCell.swift */,
 				67BB48D7235CD3C100737D63 /* MoviesGridViewController.swift */,
 				67BB48D9235CD81D00737D63 /* MoviesGridCell.swift */,
-				673F23D72358E8D500F5C285 /* MovieCollectionView.swift */,
-				673F23D92358E94500F5C285 /* MovieCollectionCell.swift */,
 				673F23A32356775000F5C285 /* Main.storyboard */,
 				673F23A62356775100F5C285 /* Assets.xcassets */,
 				673F23A82356775100F5C285 /* LaunchScreen.storyboard */,
@@ -427,12 +421,10 @@
 			files = (
 				67BB48D6235CCA1400737D63 /* MoviesDetailViewController.swift in Sources */,
 				67BB48D8235CD3C100737D63 /* MoviesGridViewController.swift in Sources */,
-				673F23DA2358E94500F5C285 /* MovieCollectionCell.swift in Sources */,
 				67BB48DA235CD81D00737D63 /* MoviesGridCell.swift in Sources */,
 				673F23A22356775000F5C285 /* MoviesViewController.swift in Sources */,
 				673F239E2356775000F5C285 /* AppDelegate.swift in Sources */,
 				673F23CE2356839100F5C285 /* MovieTableViewCell.swift in Sources */,
-				673F23D82358E8D500F5C285 /* MovieCollectionView.swift in Sources */,
 				673F23A02356775000F5C285 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
