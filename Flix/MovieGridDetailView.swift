@@ -8,8 +8,10 @@
 
 import AlamofireImage
 import UIKit
+import WebKit
 
-class MovieGridDetailView: UIViewController {
+class MovieGridDetailView: UIViewController, WKUIDelegate {
+    
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var posterTitle: UILabel!
     @IBOutlet weak var posteroverview: UILabel!
@@ -27,8 +29,12 @@ class MovieGridDetailView: UIViewController {
         let url = URL(string: baseURL + posterPath)
         posterView.af_setImage(withURL: url!)
     }
+    @IBAction func playTrailerButton(_ sender: UIButton) {
+        print("Taped")
+        performSegue(withIdentifier: "trailer", sender: sender)
+    }
+    
     @IBAction func dismissButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 }
-//overview

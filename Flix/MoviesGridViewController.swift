@@ -90,7 +90,7 @@ extension MoviesGridViewController: UICollectionViewDataSource, UICollectionView
 
 extension MoviesGridViewController: BonsaiControllerDelegate {
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
-            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (3/4)))
+            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 3), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (3/4)))
         }
         func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
             return BonsaiController(fromDirection: .bottom, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
