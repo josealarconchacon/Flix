@@ -15,11 +15,17 @@ class MovieGridDetailView: UIViewController, WKUIDelegate {
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var posterTitle: UILabel!
     @IBOutlet weak var posteroverview: UILabel!
+    @IBOutlet weak var playTrailer: UIButton!
     
     var movie: [String: Any]!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDetail()
+    }
+    
+    private func updateDetail() {
         posterTitle.text = movie["original_title"] as? String
         posterTitle.sizeToFit()
         posteroverview.text = movie["overview"] as? String
@@ -29,9 +35,16 @@ class MovieGridDetailView: UIViewController, WKUIDelegate {
         let url = URL(string: baseURL + posterPath)
         posterView.af_setImage(withURL: url!)
     }
+    
     @IBAction func playTrailerButton(_ sender: UIButton) {
         print("Taped")
         performSegue(withIdentifier: "trailer", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let photoViewController = segue.destination as! WebViewController
+        photoViewController.playMovieTrailer = movie
+        print("rrr\(movie)")
     }
     
     @IBAction func dismissButton(_ sender: UIButton) {
