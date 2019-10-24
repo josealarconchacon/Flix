@@ -280,16 +280,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-sZ-MNy">
-                                <rect key="frame" x="43" y="133" width="55" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="play.rectangle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="playTrailerButton:" destination="0ps-AO-Z0f" eventType="touchUpInside" id="b1g-fX-m6j"/>
-                                    <segue destination="zzc-8i-zuP" kind="presentation" identifier="trailer" id="E5Z-wD-lr0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -299,7 +289,6 @@
                         <viewLayoutGuide key="safeArea" id="dbR-ne-VQD"/>
                     </view>
                     <connections>
-                        <outlet property="playTrailer" destination="Vc2-sZ-MNy" id="0yC-Yg-fQK"/>
                         <outlet property="posterTitle" destination="QYe-n0-nUv" id="iTl-Ai-8Bb"/>
                         <outlet property="posterView" destination="180-0s-boc" id="EzF-nF-3Qd"/>
                         <outlet property="posteroverview" destination="4tG-pI-fUL" id="1zK-5h-ooa"/>
@@ -308,36 +297,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMP-yT-gvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2262.3188405797105" y="404.46428571428572"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="seo-bR-BRd">
-            <objects>
-                <viewController id="zzc-8i-zuP" customClass="WebViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NIZ-sN-4dK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-5x-pYv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1IH-5x-pYv" secondAttribute="bottom" id="4va-f8-8zs"/>
-                            <constraint firstItem="1IH-5x-pYv" firstAttribute="top" secondItem="NIZ-sN-4dK" secondAttribute="top" id="HvR-4Q-XOg"/>
-                            <constraint firstItem="1IH-5x-pYv" firstAttribute="leading" secondItem="z8g-vc-uKl" secondAttribute="leading" id="b3e-ge-EqU"/>
-                            <constraint firstItem="1IH-5x-pYv" firstAttribute="trailing" secondItem="z8g-vc-uKl" secondAttribute="trailing" id="mOr-RC-YLT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="z8g-vc-uKl"/>
-                    </view>
-                    <connections>
-                        <outlet property="webVew" destination="1IH-5x-pYv" id="KmV-Jl-Yw4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uYG-rF-Ogk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2257.971014492754" y="1051.3392857142858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tuE-fF-EaB">
@@ -381,7 +340,6 @@
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="launch_image" width="138" height="139"/>
-        <image name="play.rectangle.fill" catalog="system" width="64" height="48"/>
         <image name="projector_tabbar_item" width="21" height="25"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
