@@ -27,4 +27,8 @@ class MovieTableViewCell: UITableViewCell {
         movieImageView.layer.shadowRadius = 10
         movieImageView.layer.shadowOpacity = 5
      }
+    func labelCell() {
+        movieTitleLabel.font = UIFont(name: "Open Sans", size: 60)
+        movieOverView.font = UIFont(name: "Open Sans", size: 30)
+    }
 }
