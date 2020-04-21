@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3QR-uk-nw7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3QR-uk-nw7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,33 +33,47 @@
                                                         <constraint firstAttribute="width" constant="121" id="vVN-iF-w7F"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-dm-jtL">
-                                                    <rect key="frame" x="130" y="50" width="274" height="96"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-nH-9ac">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FZi-eY-mKd">
                                                     <rect key="frame" x="130" y="19" width="278" height="28"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-nH-9ac">
+                                                            <rect key="frame" x="0.0" y="0.0" width="278" height="28"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="278" id="5hM-Sv-Znh"/>
+                                                                <constraint firstAttribute="height" constant="28" id="RZg-nQ-Qsh"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="278" id="5hM-Sv-Znh"/>
-                                                        <constraint firstAttribute="height" constant="28" id="RZg-nQ-Qsh"/>
+                                                        <constraint firstAttribute="height" constant="28" id="5ce-kM-lSg"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lAg-aa-2NE">
+                                                    <rect key="frame" x="130" y="52" width="258" height="81"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-dm-jtL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="258" height="81"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="S8u-nH-9ac" firstAttribute="top" secondItem="NXi-9R-nGA" secondAttribute="topMargin" constant="8" id="BKT-Qr-iwD"/>
+                                                <constraint firstItem="FZi-eY-mKd" firstAttribute="leading" secondItem="gtb-lL-vkb" secondAttribute="trailing" constant="6" id="5ct-OE-OiE"/>
+                                                <constraint firstItem="FZi-eY-mKd" firstAttribute="top" secondItem="NXi-9R-nGA" secondAttribute="top" constant="19" id="Djq-Q7-8Af"/>
                                                 <constraint firstItem="gtb-lL-vkb" firstAttribute="top" secondItem="NXi-9R-nGA" secondAttribute="topMargin" constant="-2" id="JWa-v5-TOm"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Bus-dm-jtL" secondAttribute="bottom" constant="-3" id="RGR-Nb-6TT"/>
-                                                <constraint firstItem="S8u-nH-9ac" firstAttribute="leading" secondItem="gtb-lL-vkb" secondAttribute="trailing" constant="6" id="eDu-Ey-Qhl"/>
-                                                <constraint firstItem="S8u-nH-9ac" firstAttribute="leading" secondItem="Bus-dm-jtL" secondAttribute="leading" id="eOm-61-o4n"/>
+                                                <constraint firstAttribute="trailing" secondItem="FZi-eY-mKd" secondAttribute="trailing" constant="6" id="JWb-Cg-YIq"/>
+                                                <constraint firstItem="lAg-aa-2NE" firstAttribute="leading" secondItem="gtb-lL-vkb" secondAttribute="trailing" constant="6" id="fFE-hy-fTS"/>
                                                 <constraint firstItem="gtb-lL-vkb" firstAttribute="centerY" secondItem="NXi-9R-nGA" secondAttribute="centerY" id="hhv-KM-2rC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lAg-aa-2NE" secondAttribute="trailing" constant="6" id="kqx-2W-aCW"/>
                                                 <constraint firstItem="gtb-lL-vkb" firstAttribute="leading" secondItem="NXi-9R-nGA" secondAttribute="leadingMargin" constant="-17" id="mKN-uf-zWP"/>
-                                                <constraint firstItem="Bus-dm-jtL" firstAttribute="top" secondItem="S8u-nH-9ac" secondAttribute="bottom" constant="3" id="tHg-cb-HtP"/>
-                                                <constraint firstItem="S8u-nH-9ac" firstAttribute="trailing" secondItem="Bus-dm-jtL" secondAttribute="trailing" constant="4" id="xQp-V1-BHe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lAg-aa-2NE" secondAttribute="bottom" constant="10" id="obG-84-bJW"/>
+                                                <constraint firstItem="lAg-aa-2NE" firstAttribute="top" secondItem="FZi-eY-mKd" secondAttribute="bottom" constant="5" id="seQ-km-YiR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -88,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1536" y="-504"/>
+            <point key="canvasLocation" x="1534.7826086956522" y="-504.24107142857139"/>
         </scene>
         <!--Movies Detail View Controller-->
         <scene sceneID="4rI-dz-DyS">
