@@ -57,6 +57,7 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         let posterPath = movie["poster_path"] as! String
         let url = URL(string: baseURL + posterPath)
         cell.movieImageView.af_setImage(withURL: url!)
+        cell.imgCell()
         return cell
     }
     
@@ -73,3 +74,4 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         return 150
     }
 }
+

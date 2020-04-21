@@ -20,4 +20,11 @@ class MovieTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func imgCell() {
+        movieImageView.layer.cornerRadius = 20
+        movieImageView.layer.borderColor = UIColor.lightGray.cgColor
+        movieImageView.layer.shadowRadius = 10
+        movieImageView.layer.shadowOpacity = 5
+     }
 }
