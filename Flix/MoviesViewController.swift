@@ -59,6 +59,7 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.movieImageView.af_setImage(withURL: url!)
         cell.imgCell()
         cell.labelCell()
+        cell.cell()
         return cell
     }
     

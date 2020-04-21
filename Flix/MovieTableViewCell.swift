@@ -13,6 +13,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieOverView: UILabel!
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -30,5 +31,13 @@ class MovieTableViewCell: UITableViewCell {
     func labelCell() {
         movieTitleLabel.font = UIFont(name: "Open Sans", size: 60)
         movieOverView.font = UIFont(name: "Open Sans", size: 30)
+    }
+    
+    func cell() {
+        layer.backgroundColor = UIColor.white.cgColor
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 0.2
+        layer.cornerRadius = 0.1
+        clipsToBounds = true
     }
 }
