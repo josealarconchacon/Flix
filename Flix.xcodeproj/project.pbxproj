@@ -124,6 +124,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6709DAC2244F4CE500632B77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				673F23A12356775000F5C285 /* MoviesViewController.swift */,
+				67BB48D5235CCA1400737D63 /* MoviesDetailViewController.swift */,
+				67BB48D7235CD3C100737D63 /* MoviesGridViewController.swift */,
+				67BB48DB235CE35800737D63 /* MovieGridDetailView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6709DAC3244F4CF800632B77 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				673F23CD2356839100F5C285 /* MovieTableViewCell.swift */,
+				67BB48D9235CD81D00737D63 /* MoviesGridCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6709DAC4244F4D0200632B77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				673F23A32356775000F5C285 /* Main.storyboard */,
+				673F23A82356775100F5C285 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6709DAC5244F4D1200632B77 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				673F239D2356775000F5C285 /* AppDelegate.swift */,
+				673F239F2356775000F5C285 /* SceneDelegate.swift */,
+				673F23A62356775100F5C285 /* Assets.xcassets */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
 		673F23912356774F00F5C285 = {
 			isa = PBXGroup;
 			children = (
@@ -149,17 +188,10 @@
 		673F239C2356775000F5C285 /* Flix */ = {
 			isa = PBXGroup;
 			children = (
-				673F239D2356775000F5C285 /* AppDelegate.swift */,
-				673F239F2356775000F5C285 /* SceneDelegate.swift */,
-				673F23A12356775000F5C285 /* MoviesViewController.swift */,
-				67BB48D5235CCA1400737D63 /* MoviesDetailViewController.swift */,
-				673F23CD2356839100F5C285 /* MovieTableViewCell.swift */,
-				67BB48D7235CD3C100737D63 /* MoviesGridViewController.swift */,
-				67BB48D9235CD81D00737D63 /* MoviesGridCell.swift */,
-				67BB48DB235CE35800737D63 /* MovieGridDetailView.swift */,
-				673F23A32356775000F5C285 /* Main.storyboard */,
-				673F23A62356775100F5C285 /* Assets.xcassets */,
-				673F23A82356775100F5C285 /* LaunchScreen.storyboard */,
+				6709DAC5244F4D1200632B77 /* Support File */,
+				6709DAC2244F4CE500632B77 /* Controller */,
+				6709DAC3244F4CF800632B77 /* Cell */,
+				6709DAC4244F4D0200632B77 /* View */,
 				673F23AB2356775100F5C285 /* Info.plist */,
 			);
 			path = Flix;

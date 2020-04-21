@@ -77,3 +77,11 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+public extension UITableView {
+    func deselectSelectedRowAnimated(animated: Bool) {
+        if let indexPath = indexPathForSelectedRow {
+            deselectRow(at: indexPath, animated: animated)
+        }
+    }
+
+}
